@@ -1,42 +1,34 @@
-let a = 19;
-
-// >= <= == != порядок важен
-// CTRL + slash - mass Comment
-// if (a != 9) {
-//     //true
-//     console.log('Yes');
-// }
-// else {
-//     console.log('else');
+// document.querySelector('button').onclick = () => {
+//     console.log(document.querySelector('#one').value);//без указания вэлью будет возвращён сам объект а не то что там введено
+//     //применение стилей к объектам
+//     document.querySelector('button').style.backgroundColor =
+//         document.querySelector('#one').value;
 // }
 
-const button = document.querySelector('button');
-const input = document.querySelector('.age');
+// document.querySelector('#one').oninput = () => {
+//     console.log(document.querySelector('#one').value);
+//     document.querySelector('span').innerHTML = document.querySelector('#one').value;
+// }
 
-// () => {} это сокращенный вариант записи функции (стрелочная)
-button.onclick = () => {
-    let num = +input.value;
-    if (num >= 16 && num <= 60) {//если не добавить верхнюю границу, то второй ифэлз не сработает на 60+
-        console.log('welcome!!!');
-    }
-    else if (num > 60) {
-        console.log('Ты точно сюда?')
+document.querySelector('#btn-1').onclick = () => {
+    console.log(document.querySelector('#i2').value);
+    let myCheckBox = document.querySelector('#i2');
+    console.log(myCheckBox.checked);
+    if (myCheckBox.checked) {
+        console.log('Нажат');
     }
     else {
-        console.log('Ты не пройдёшь!!');
-    }
-    switch (num) {
-        case 15:
-            console.log('Ещё год потерпи!');
-            break;//если не надо проверять блоки ниже - пиши брик
-        case 16:
-            console.log('Ураааа можно!!!!');
-            break;
-        default:
-            console.log('oooooooooook');
+        console.log('Не нажат');
     }
 }
 
-let b = 3;
-console.log(b > 3 && b < 7);
-console.log(b == 3 || b == 7);
+document.querySelector('#btn-2').onclick = (event) => {
+    event.preventDefault();//остановка дефолтного перезагруза страницы
+    // let text = document.querySelector('#two');
+    // console.log(text.value);
+    // text.value = 'one';
+    let form = document.querySelector('form');
+    console.log(form);
+    console.log(form.elements.two.value);//форма.свойствоЭлементс.идентификатор.значение
+    console.log(form.elements.three.value);
+}
