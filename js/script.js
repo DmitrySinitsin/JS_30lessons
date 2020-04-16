@@ -1,23 +1,19 @@
-console.log('Hello');//строки берем в кавычки
-console.log("world");
-console.log("3333");
-console.log(334);
-console.log('Hello' + ' ' + 'world');//конкатенация
-console.info('Hello');
-//alert('Hello');
-// alert('Hello');
-//alert('Hello');
+let a = 6;
+let b = 'Hello';
 
-document.getElementById('out').innerHTML = 'Hello';
-document.getElementById('out').innerHTML = 2019;
-document.getElementById('out').innerHTML = '<b>2020</b>';
-document.querySelector('.header').innerHTML = 15;
-document.querySelector('#one').innerHTML = 7777;
-document.getElementById('one').innerHTML = 888;
+console.log(a);
 
-let b;
-let a = document.querySelector('#one');
-let c;
-c = document.querySelector('.header');
-a.innerHTML = 999;
-c.innerHTML = 6666;
+let inputIn = document.querySelector('.input-in');// input
+
+let button = document.querySelector('button');// button
+let div = document.querySelector('.out');
+
+button.onclick = function () {
+    //кнопка будет нажата
+    console.log('Работает!!!!!!!!!!');
+    //console.log(inputIn.value);// value - это то, что введено в input
+    let b = +inputIn.value;//плюс перед переменной - преобразование переменной из строковой в число
+    console.log(b + 10);// '66' + 10 = 6610
+    div.innerHTML = b;
+    inputIn.value = '';//очистка инпута от введенного значения
+}
