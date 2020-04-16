@@ -1,19 +1,42 @@
-let a = 6;
-let b = 'Hello';
+let a = 19;
 
-console.log(a);
+// >= <= == != порядок важен
+// CTRL + slash - mass Comment
+// if (a != 9) {
+//     //true
+//     console.log('Yes');
+// }
+// else {
+//     console.log('else');
+// }
 
-let inputIn = document.querySelector('.input-in');// input
+const button = document.querySelector('button');
+const input = document.querySelector('.age');
 
-let button = document.querySelector('button');// button
-let div = document.querySelector('.out');
-
-button.onclick = function () {
-    //кнопка будет нажата
-    console.log('Работает!!!!!!!!!!');
-    //console.log(inputIn.value);// value - это то, что введено в input
-    let b = +inputIn.value;//плюс перед переменной - преобразование переменной из строковой в число
-    console.log(b + 10);// '66' + 10 = 6610
-    div.innerHTML = b;
-    inputIn.value = '';//очистка инпута от введенного значения
+// () => {} это сокращенный вариант записи функции (стрелочная)
+button.onclick = () => {
+    let num = +input.value;
+    if (num >= 16 && num <= 60) {//если не добавить верхнюю границу, то второй ифэлз не сработает на 60+
+        console.log('welcome!!!');
+    }
+    else if (num > 60) {
+        console.log('Ты точно сюда?')
+    }
+    else {
+        console.log('Ты не пройдёшь!!');
+    }
+    switch (num) {
+        case 15:
+            console.log('Ещё год потерпи!');
+            break;//если не надо проверять блоки ниже - пиши брик
+        case 16:
+            console.log('Ураааа можно!!!!');
+            break;
+        default:
+            console.log('oooooooooook');
+    }
 }
+
+let b = 3;
+console.log(b > 3 && b < 7);
+console.log(b == 3 || b == 7);
