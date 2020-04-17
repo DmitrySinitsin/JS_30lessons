@@ -32,3 +32,38 @@ document.querySelector('#btn-2').onclick = (event) => {
     console.log(form.elements.two.value);//форма.свойствоЭлементс.идентификатор.значение
     console.log(form.elements.three.value);
 }
+console.log('Dmitry');
+console.log(05);
+console.log('Добро ' + 'пожаловать ' + 'на курс!');
+let a = 7;
+let b = 9;
+console.log(a * b);
+let c = 7;
+let d = 9;
+console.log(7 / 9);
+let e = 3;
+let f = 5;
+console.log(+e + f);
+console.log(e + f);
+
+let inField = document.querySelector('#i-1');
+let startButton = document.querySelector('#b-1');
+let resField = document.querySelector('#out1');
+startButton.onclick = function f1() {
+    let a = +inField.value;
+    console.log('Work!');
+    resField.innerHTML = a == 4;
+}
+
+let a21 = document.querySelector('#a21');
+let a22 = document.querySelector('#a22');
+let btnS = document.querySelector('#b-2');
+let outWindow = document.querySelector('#out-2');
+btnS.onclick = function f2() {
+    let a = +a21.value;
+    let b = +a22.value;
+    if (a < b)
+        outWindow.innerHTML = b;
+    else
+        outWindow.innerHTML = a;
+}
