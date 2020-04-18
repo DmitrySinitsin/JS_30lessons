@@ -67,3 +67,16 @@ btnS.onclick = function f2() {
     else
         outWindow.innerHTML = a;
 }
+let button1 = document.querySelector('#b-1');//вечно забываю в указании на идентификатор давать знак диеза (решетку)!!!!
+let input1 = document.querySelector('.b-2');
+let paragraph1 = document.querySelector('.p-3');
+button1.onclick = () => {
+    console.log ('button');
+    alert('Номер задачи: 1');
+}
+input1.onclick=()=>{
+    alert('Номер задачи теперь: 2');
+}
+paragraph1.onclick =()=>{
+    alert('Номер задачи таперича такой: 3');
+}
