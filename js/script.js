@@ -123,6 +123,7 @@ buttonStart3.onclick = () => {
 //     resField.innerHTML = a == 4;
 // }
 
+<<<<<<< HEAD
 // let a21 = document.querySelector('#a21');
 // let a22 = document.querySelector('#a22');
 // let btnS = document.querySelector('#b-2');
@@ -135,3 +136,30 @@ buttonStart3.onclick = () => {
 //     else
 //         outWindow.innerHTML = a;
 // }
+=======
+let a21 = document.querySelector('#a21');
+let a22 = document.querySelector('#a22');
+let btnS = document.querySelector('#b-2');
+let outWindow = document.querySelector('#out-2');
+btnS.onclick = function f2() {
+    let a = +a21.value;
+    let b = +a22.value;
+    if (a < b)
+        outWindow.innerHTML = b;
+    else
+        outWindow.innerHTML = a;
+}
+let button1 = document.querySelector('#b-1');//вечно забываю в указании на идентификатор давать знак диеза (решетку)!!!!
+let input1 = document.querySelector('.b-2');
+let paragraph1 = document.querySelector('.p-3');
+button1.onclick = () => {
+    console.log ('button');
+    alert('Номер задачи: 1');
+}
+input1.onclick=()=>{
+    alert('Номер задачи теперь: 2');
+}
+paragraph1.onclick =()=>{
+    alert('Номер задачи таперича такой: 3');
+}
+>>>>>>> 591060bc532a66259a85924188e48c95af3e2b94
