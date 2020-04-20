@@ -1,27 +1,115 @@
-let buttonStart = document.querySelector('#b-1');
-buttonStart.onclick = () => {
-    strCount = '';
-    for (let i = 1; i <= 50; i++) {
-        strCount += i + ' ';
+
+let out4 = document.querySelector('.out4');
+for (let i = 1; i <= 4; i++) {
+    //out4.innerHTML += `<br>`;
+    for (let k = 0; k < 3; k++) {
+        out4.innerHTML += '*' + '_';
     }
-    document.querySelector('#out-1').innerHTML = strCount;
+    out4.innerHTML += '<br>';
 }
-let buttonStart2 = document.querySelector('#b-2');
-buttonStart2.onclick = () => {
-    strCount2 = '';
-    for (let i = 2; i <= 122; i += 2) {
-        strCount2 += i + ' ';
+// нарисуйте строку:
+
+// *_*_*_
+// *_*_*_
+// *_*_*_
+// *_*_*_
+// Решить задачу с 
+// помощью вложенных циклов. 
+// Внешний цикл выводит 
+// перенос строки br, 
+// внутренний - звездочки, 
+// знак подчеркивания.
+
+
+
+let out3 = document.querySelector('.out3');
+for (let i = 1; i < 4; i++) {
+    out3.innerHTML += `${i}<br>`;
+    for (let k = 0; k < 3; k++) {
+        out3.innerHTML += '*' + '_';
     }
-    document.querySelector('#out-2').innerHTML = strCount2;
+    out3.innerHTML += '<br>';
 }
-let buttonStart3 = document.querySelector('#b-3');
-buttonStart3.onclick = () => {
-    strCount3 = ''; git
-    for (let i = 25; i >= 7; i--) {
-        strCount3 += i + ' ';
+// нарисуйте строку:
+// 1
+// *_*_*_
+// 2
+// *_*_*_
+// 3
+// *_*_*_
+// Решить задачу с помощью вложенных циклов. 
+// Внешний цикл выводит цифры и перенос строки br, , 
+// второй - звездочки, 
+// знак подчеркивания 
+// и знак переноса.
+
+
+
+let out2 = document.querySelector('.out2');
+console.log(out2);
+// С помощью вложенных циклов, нарисуйте строку:
+
+// ***_***_***_
+// где звездочки рисуются с помощью 
+// внутреннего цикла от 0 до 3, 
+// а _ с помощью внешнего.
+for (let i = 0; i < 3; i++) {
+
+    for (let k = 0; k < 3; k++) {
+        out2.innerHTML += '*';
     }
-    document.querySelector('#out-3').innerHTML = strCount3;
+    out2.innerHTML += '_';
 }
+
+
+
+// let out = document.querySelector('.out');
+// console.log(out);
+
+// for (let i = 1; i < 10; i++) {
+//     // out.innerHTML += '3 * ' + i + " = " + i * 3 + '<br>';
+//     //out.innerHTML += `3 * ${i} = ${3 * i}<br>`;//интерполяция
+//     for (let k = 1; k < 10; k++) {
+//         out.innerHTML += `${i} * ${k} = ${k * i}<br>`;//интерполяция
+//     }
+//     out.innerHTML += '<hr>';
+// }
+
+
+
+
+// for (let i = 0; i < 5; i++) {
+//     for (let k = 0; k < 10; k++) {
+//         out.innerHTML += k;
+//     }
+//     out.innerHTML += '<br>';
+// }
+
+
+// let buttonStart = document.querySelector('#b-1');
+// buttonStart.onclick = () => {
+//     strCount = '';
+//     for (let i = 1; i <= 50; i++) {
+//         strCount += i + ' ';
+//     }
+//     document.querySelector('#out-1').innerHTML = strCount;
+// }
+// let buttonStart2 = document.querySelector('#b-2');
+// buttonStart2.onclick = () => {
+//     strCount2 = '';
+//     for (let i = 2; i <= 122; i += 2) {
+//         strCount2 += i + ' ';
+//     }
+//     document.querySelector('#out-2').innerHTML = strCount2;
+// }
+// let buttonStart3 = document.querySelector('#b-3');
+// buttonStart3.onclick = () => {
+//     strCount3 = ''; git
+//     for (let i = 25; i >= 7; i--) {
+//         strCount3 += i + ' ';
+//     }
+//     document.querySelector('#out-3').innerHTML = strCount3;
+// }
 
 
 // let div = document.querySelectorAll('.one');
@@ -123,7 +211,6 @@ buttonStart3.onclick = () => {
 //     resField.innerHTML = a == 4;
 // }
 
-<<<<<<< HEAD
 // let a21 = document.querySelector('#a21');
 // let a22 = document.querySelector('#a22');
 // let btnS = document.querySelector('#b-2');
@@ -136,30 +223,3 @@ buttonStart3.onclick = () => {
 //     else
 //         outWindow.innerHTML = a;
 // }
-=======
-let a21 = document.querySelector('#a21');
-let a22 = document.querySelector('#a22');
-let btnS = document.querySelector('#b-2');
-let outWindow = document.querySelector('#out-2');
-btnS.onclick = function f2() {
-    let a = +a21.value;
-    let b = +a22.value;
-    if (a < b)
-        outWindow.innerHTML = b;
-    else
-        outWindow.innerHTML = a;
-}
-let button1 = document.querySelector('#b-1');//вечно забываю в указании на идентификатор давать знак диеза (решетку)!!!!
-let input1 = document.querySelector('.b-2');
-let paragraph1 = document.querySelector('.p-3');
-button1.onclick = () => {
-    console.log ('button');
-    alert('Номер задачи: 1');
-}
-input1.onclick=()=>{
-    alert('Номер задачи теперь: 2');
-}
-paragraph1.onclick =()=>{
-    alert('Номер задачи таперича такой: 3');
-}
->>>>>>> 591060bc532a66259a85924188e48c95af3e2b94
