@@ -16,7 +16,7 @@ buttonStart2.onclick = () => {
 }
 let buttonStart3 = document.querySelector('#b-3');
 buttonStart3.onclick = () => {
-    strCount3 = '';
+    strCount3 = ''; git
     for (let i = 25; i >= 7; i--) {
         strCount3 += i + ' ';
     }
