@@ -1,3 +1,43 @@
+const one = document.querySelector('.one');
+one.style.width = '150px';
+one.style.paddingBottom = '40px';//кэмелКейс и присваивать СТРОКУ с единицами измерения
+//console.log(one.style);
+one.classList.add('two', 'three');//затрет предыдущий класс если совпадение и добавит указанные классы
+one.classList.remove('three');
+const toggle = document.querySelector('.toggle');
+toggle.onclick = function () {
+    this.classList.toggle('three');
+}
+//атрибуты задаются с префиксом data
+
+console.log(one.getAttribute('data'));
+console.log(document.querySelectorAll('link')[1].getAttribute('href'));
+
+one.setAttribute('data-num', 6);
+
+
+let gas = document.querySelectorAll('.gas');
+for (let i = 0; i < gas.length; i++) {
+    gas[i].onclick = function () {
+        let gallons = document.querySelector('.gallons').value;
+        let amount = this.getAttribute('data');
+
+        console.log(gallons * amount);
+    }
+}
+
+let a = document.createElement('div');
+a.innerHTML = 'Hello!';
+a.classList.add('one');
+a.onclick = function () {
+    alert('Hello!');
+}
+
+document.querySelector('.test').appendChild(a);//добавление дочернего элемента
+console.log(a);
+
+
+
 // Допишите код функции так, 
 // чтобы она возвращала 
 // произведение двух чисел, 
@@ -6,15 +46,15 @@
 // с помощью кнопок b3-1 и b3-2.
 
 
-function t3(a, b) {
-    return a * b;
-}
-document.querySelector('.b-3-1').onclick = function () {
-    document.querySelector('.out-3-1').textContent = t3(3, 4);
-}
-document.querySelector('.b-3-2').onclick = function () {
-    document.querySelector('.out-3-2').textContent = t3(5, 6);
-}
+// function t3(a, b) {
+//     return a * b;
+// }
+// document.querySelector('.b-3-1').onclick = function () {
+//     document.querySelector('.out-3-1').textContent = t3(3, 4);
+// }
+// document.querySelector('.b-3-2').onclick = function () {
+//     document.querySelector('.out-3-2').textContent = t3(5, 6);
+// }
 
 
 
@@ -24,94 +64,94 @@ document.querySelector('.b-3-2').onclick = function () {
 // можно встраивать в выражения. 
 // Обратите внимание, как изменился вызов функции.
 
-let a2 = 8;
-function t2() {
-    return a2;
-}
-document.querySelector('.b-2').onclick = function () {
-    document.querySelector('#out-2').textContent = t2() * 2;
-}
+// let a2 = 8;
+// function t2() {
+//     return a2;
+// }
+// document.querySelector('.b-2').onclick = function () {
+//     document.querySelector('#out-2').textContent = t2() * 2;
+// }
 
 
 
 
 // Напишите функцию t1, которая 
 // при нажатии кнопки выводит в out-1 переменную a1.
-let a1 = 8;
-let buttonZ1 = document.querySelector('.z-1');
-buttonZ1.onclick = function t1() {
-    document.querySelector('#out-1').innerHTML = a1;
-}
+// let a1 = 8;
+// let buttonZ1 = document.querySelector('.z-1');
+// buttonZ1.onclick = function t1() {
+//     document.querySelector('#out-1').innerHTML = a1;
+// }
 
 
 
 
 
 
-document.querySelector('.f-2').onclick = function () {
-    console.log('*****************');
-}
-//при повторах отрабатывает последняя функция
-document.querySelector('.f-2').onclick = () => {
-    console.log('.....................');
-}
-(a, b) => {//два параметра (сокращенная запись стрелочной функции)
+// document.querySelector('.f-2').onclick = function () {
+//     console.log('*****************');
+// }
+// //при повторах отрабатывает последняя функция
+// document.querySelector('.f-2').onclick = () => {
+//     console.log('.....................');
+// }
+// (a, b) => {//два параметра (сокращенная запись стрелочной функции)
 
-}
+// }
 
-a => {//один параметр, скобки опускаются в сокращении стрелочной функции
+// a => {//один параметр, скобки опускаются в сокращении стрелочной функции
 
-}
+// }
 
-(a) => 'Hello' * a;//сокращение с ритёрном функции
-
-
+// (a) => 'Hello' * a;//сокращение с ритёрном функции
 
 
-let f1 = document.querySelector('.f-1');
 
-function one() {
-    console.log('Work!!')
-}
 
-one();
+// let f1 = document.querySelector('.f-1');
 
-//f1.onclick = one;//вызов функции указывается БЕЗ круглых скобок (если их указать то функция отработает один раз и результат запишется в объект слева от оператора присваивания)
-//f1.onclick = function () {//анонимная функция (без наименования)
-f1.onclick = () => {//стрелочная функция - аналог анонимной
-    console.log('Hello!');
-}
+// function one() {
+//     console.log('Work!!')
+// }
 
-console.log(1 + one());
-console.log(one());//undefined
+// one();
 
-function two() {
-    console.log('work 22222');
-    return 54;
-}
-two();
-console.log(1 + two());
+// //f1.onclick = one;//вызов функции указывается БЕЗ круглых скобок (если их указать то функция отработает один раз и результат запишется в объект слева от оператора присваивания)
+// //f1.onclick = function () {//анонимная функция (без наименования)
+// f1.onclick = () => {//стрелочная функция - аналог анонимной
+//     console.log('Hello!');
+// }
 
-let a = 8;
-let b = 9;
-//let c;
-function multi() {
-    console.log(a * b);
-    //c = a * b;
-    return a * b;
-}
-let c1 = multi();
-let c2 = 10 * multi();
-//console.log(c);
-console.log(c1, c2);
+// console.log(1 + one());
+// console.log(one());//undefined
 
-function multi2(x = 9, y = 8) {
-    return x * y;
-}
-console.log(multi2(4, 5));
-console.log(multi2(20, a));
-console.log(multi2());//используются параметры по умолчанию
-console.log(multi2(10));//будет заменен лишь первый параметр
+// function two() {
+//     console.log('work 22222');
+//     return 54;
+// }
+// two();
+// console.log(1 + two());
+
+// let a = 8;
+// let b = 9;
+// //let c;
+// function multi() {
+//     console.log(a * b);
+//     //c = a * b;
+//     return a * b;
+// }
+// let c1 = multi();
+// let c2 = 10 * multi();
+// //console.log(c);
+// console.log(c1, c2);
+
+// function multi2(x = 9, y = 8) {
+//     return x * y;
+// }
+// console.log(multi2(4, 5));
+// console.log(multi2(20, a));
+// console.log(multi2());//используются параметры по умолчанию
+// console.log(multi2(10));//будет заменен лишь первый параметр
 
 // let out4 = document.querySelector('.out4');
 // for (let i = 1; i <= 4; i++) {
