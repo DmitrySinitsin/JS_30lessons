@@ -25,3 +25,9 @@ div{
 .three{
     border:2px solid red;
 }
+.out-1, .out-2{
+    border:5px solid greenyellow;
+}
+.bg-2{
+    border:5px solid blueviolet;
+}

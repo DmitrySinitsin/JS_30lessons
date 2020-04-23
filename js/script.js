@@ -1,40 +1,64 @@
-const one = document.querySelector('.one');
-one.style.width = '150px';
-one.style.paddingBottom = '40px';//кэмелКейс и присваивать СТРОКУ с единицами измерения
-//console.log(one.style);
-one.classList.add('two', 'three');//затрет предыдущий класс если совпадение и добавит указанные классы
-one.classList.remove('three');
-const toggle = document.querySelector('.toggle');
-toggle.onclick = function () {
-    this.classList.toggle('three');
-}
-//атрибуты задаются с префиксом data
-
-console.log(one.getAttribute('data'));
-console.log(document.querySelectorAll('link')[1].getAttribute('href'));
-
-one.setAttribute('data-num', 6);
-
-
-let gas = document.querySelectorAll('.gas');
-for (let i = 0; i < gas.length; i++) {
-    gas[i].onclick = function () {
-        let gallons = document.querySelector('.gallons').value;
-        let amount = this.getAttribute('data');
-
-        console.log(gallons * amount);
-    }
+//ширину 200px, высоту 40px
+buttonHuy = document.querySelector('.b-1');
+outHuy = document.querySelector('.out-1');
+buttonHuy.onclick = function f1() {
+    outHuy.style.width = '200px';
+    outHuy.style.height = '40px';
 }
 
-let a = document.createElement('div');
-a.innerHTML = 'Hello!';
-a.classList.add('one');
-a.onclick = function () {
-    alert('Hello!');
+// По нажатию кнопки b-2 запускайте 
+// функцию f2, которая присваивает 
+// блоку out-2 класс .bg-2.
+buttonHuy = document.querySelector('.b-2');
+buttonUdaliClass = document.querySelector('.b-3');
+outHuy = document.querySelector('.out-2');
+buttonHuy.onclick = function f2() {
+    outHuy.classList.add('bg-2');
+}
+buttonUdaliClass.onclick = function f3() {
+    outHuy.classList.remove('bg-2');
 }
 
-document.querySelector('.test').appendChild(a);//добавление дочернего элемента
-console.log(a);
+
+
+
+// const one = document.querySelector('.one');
+// one.style.width = '150px';
+// one.style.paddingBottom = '40px';//кэмелКейс и присваивать СТРОКУ с единицами измерения
+// //console.log(one.style);
+// one.classList.add('two', 'three');//затрет предыдущий класс если совпадение и добавит указанные классы
+// one.classList.remove('three');
+// const toggle = document.querySelector('.toggle');
+// toggle.onclick = function () {
+//     this.classList.toggle('three');
+// }
+// //атрибуты задаются с префиксом data
+
+// console.log(one.getAttribute('data'));
+// console.log(document.querySelectorAll('link')[1].getAttribute('href'));
+
+// one.setAttribute('data-num', 6);
+
+
+// let gas = document.querySelectorAll('.gas');
+// for (let i = 0; i < gas.length; i++) {
+//     gas[i].onclick = function () {
+//         let gallons = document.querySelector('.gallons').value;
+//         let amount = this.getAttribute('data');
+
+//         console.log(gallons * amount);
+//     }
+// }
+
+// let a = document.createElement('div');
+// a.innerHTML = 'Hello!';
+// a.classList.add('one');
+// a.onclick = function () {
+//     alert('Hello!');
+// }
+
+// document.querySelector('.test').appendChild(a);//добавление дочернего элемента
+// console.log(a);
 
 
 
