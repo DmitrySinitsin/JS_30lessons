@@ -1,23 +1,41 @@
+let a = 'Иван';
+let b = '37';
+let z7 = 'Овен';
+let c = ['Иван', 37, 'Овен'];//создание и инициализация значениями
+let d = [];//создание пустого массива
+console.log(c[0]);
+console.log(c[1]);
+console.log(c[5]);//undefined
+console.log(c);
+console.log(c.length);
+
+
+
+
+
+
+
+
 //ширину 200px, высоту 40px
-buttonHuy = document.querySelector('.b-1');
-outHuy = document.querySelector('.out-1');
-buttonHuy.onclick = function f1() {
-    outHuy.style.width = '200px';
-    outHuy.style.height = '40px';
-}
+// buttonHuy = document.querySelector('.b-1');
+// outHuy = document.querySelector('.out-1');
+// buttonHuy.onclick = function f1() {
+//     outHuy.style.width = '200px';
+//     outHuy.style.height = '40px';
+// }
 
 // По нажатию кнопки b-2 запускайте 
 // функцию f2, которая присваивает 
 // блоку out-2 класс .bg-2.
-buttonHuy = document.querySelector('.b-2');
-buttonUdaliClass = document.querySelector('.b-3');
-outHuy = document.querySelector('.out-2');
-buttonHuy.onclick = function f2() {
-    outHuy.classList.add('bg-2');
-}
-buttonUdaliClass.onclick = function f3() {
-    outHuy.classList.remove('bg-2');
-}
+// buttonHuy = document.querySelector('.b-2');
+// buttonUdaliClass = document.querySelector('.b-3');
+// outHuy = document.querySelector('.out-2');
+// buttonHuy.onclick = function f2() {
+//     outHuy.classList.add('bg-2');
+// }
+// buttonUdaliClass.onclick = function f3() {
+//     outHuy.classList.remove('bg-2');
+// }
 
 
 
