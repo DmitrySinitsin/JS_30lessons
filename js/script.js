@@ -1,25 +1,91 @@
-const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const b = ['a', 'b', 'c', 'd', 'e', 'f'];
+// задача перемещения единицы в ряду без цикла
+let d = [1, 0, 0, 0, 0];
+document.querySelector('.out2').innerHTML = d;
+let k = 0;
+document.querySelector('button').onclick = () => {
+    if (k + 1 < 5) {
+        d[k] = 0;
+        d[k + 1] = 1;
+        k++;
+    }
 
-console.log(a.length);
-console.log(a.push(10, 11, 44, 55, 66));
-console.log(a);
-b.push('j', 'e');
-console.log(b);
-b.pop();//удаление последнего (справа) элемента массива
-console.log(b.pop());//получаем удаляемый элемент массива
-console.log(b);
+    document.querySelector('.out2').innerHTML = d;
+}
 
-//удалить элемент внутри массива (НЕ ВЛИЯЕТ НА ДЛИНУ МАССИВА!!!)
-delete a[3];
-console.log(a);
 
-//удалить начиная с третьего элемента, запятая, удалить 4 элемента
-a.splice(3, 4, 'hi');//сплайс МЕНЯЕТ длину массива и если надо добавляет замену (третий аргумент)
-console.log(a);
 
-a.unshift('AAA');//втулить в начало массива элемент из аргумента
-console.log(a);
+// let a = [4, 5, 6];
+// let b = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+// ];
+// // console.log(b);
+
+// let out = '';
+
+// for (let i = 0; i < b.length; i++) {
+//     for (let k = 0; k < b[i].length; k++) {
+//         console.log(b[i][k]);
+//         out += b[i][k] + ' ';
+//     }
+//     out += '<br>';
+// }
+
+// for (let i = 0; i < b.length; i++) {
+//     for (let k = 0; k < b[i].length; k++) {
+//         // console.log(b[i][k]);
+//         if (b[i][k] > 4) {
+//             out += b[i][k] + ' ';
+
+//         }
+//     }
+//     out += '<br>';
+// }
+
+// document.querySelector('.out').innerHTML = out;
+
+// for (let i = 0; i < b.length; i++) {
+//     console.log(b[i]);
+//     let c = b[i];
+
+//     for (let k = 0; k < c.length; k++) {
+//         console.log(c[k]);
+//     }
+// }
+
+// for (let i = 0; i < b.length; i++) {
+//     //console.log(b[i]);
+//     let c = b[i];
+
+//     for (let k = c.length - 1; k >= 0; k--) {
+//         console.log(c[k]);
+//     }
+// }
+
+
+// const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const b = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// console.log(a.length);
+// console.log(a.push(10, 11, 44, 55, 66));
+// console.log(a);
+// b.push('j', 'e');
+// console.log(b);
+// b.pop();//удаление последнего (справа) элемента массива
+// console.log(b.pop());//получаем удаляемый элемент массива
+// console.log(b);
+
+// //удалить элемент внутри массива (НЕ ВЛИЯЕТ НА ДЛИНУ МАССИВА!!!)
+// delete a[3];
+// console.log(a);
+
+// //удалить начиная с третьего элемента, запятая, удалить 4 элемента
+// a.splice(3, 4, 'hi');//сплайс МЕНЯЕТ длину массива и если надо добавляет замену (третий аргумент)
+// console.log(a);
+
+// a.unshift('AAA');//втулить в начало массива элемент из аргумента
+// console.log(a);
 
 // let a = 'Иван';
 // let b = '37';
