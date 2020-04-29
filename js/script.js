@@ -1,13 +1,36 @@
-let a = 'Иван';
-let b = '37';
-let z7 = 'Овен';
-let c = ['Иван', 37, 'Овен'];//создание и инициализация значениями
-let d = [];//создание пустого массива
-console.log(c[0]);
-console.log(c[1]);
-console.log(c[5]);//undefined
-console.log(c);
-console.log(c.length);
+const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const b = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+console.log(a.length);
+console.log(a.push(10, 11, 44, 55, 66));
+console.log(a);
+b.push('j', 'e');
+console.log(b);
+b.pop();//удаление последнего (справа) элемента массива
+console.log(b.pop());//получаем удаляемый элемент массива
+console.log(b);
+
+//удалить элемент внутри массива (НЕ ВЛИЯЕТ НА ДЛИНУ МАССИВА!!!)
+delete a[3];
+console.log(a);
+
+//удалить начиная с третьего элемента, запятая, удалить 4 элемента
+a.splice(3, 4, 'hi');//сплайс МЕНЯЕТ длину массива и если надо добавляет замену (третий аргумент)
+console.log(a);
+
+a.unshift('AAA');//втулить в начало массива элемент из аргумента
+console.log(a);
+
+// let a = 'Иван';
+// let b = '37';
+// let z7 = 'Овен';
+// let c = ['Иван', 37, 'Овен'];//создание и инициализация значениями
+// let d = [];//создание пустого массива
+// console.log(c[0]);
+// console.log(c[1]);
+// console.log(c[5]);//undefined
+// console.log(c);
+// console.log(c.length);
 
 
 
