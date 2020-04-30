@@ -1,16 +1,52 @@
-// задача перемещения единицы в ряду без цикла
-let d = [1, 0, 0, 0, 0];
-document.querySelector('.out2').innerHTML = d;
-let k = 0;
-document.querySelector('button').onclick = () => {
-    if (k + 1 < 5) {
-        d[k] = 0;
-        d[k + 1] = 1;
-        k++;
-    }
+const a = {
+    "a": 5,
+    "b": 'Hello',
+    "z2": 'Hi',
+    y43: 2020,
+    'villa de': 3040,
+};
+a.yyyy = 5555;
+a.b = 'uuu';
+delete a.a;// удаление элемента массива по его имени
+console.log(a);
+console.log(a.z2);
+let kk = 'y43';
+console.log(a[kk]);
 
-    document.querySelector('.out2').innerHTML = d;
+// document.querySelector('.out30').innerHTML = a;
+let out30 = '';
+for (let key in a) {
+    // out30 += key;
+    // out30 += a[key] + ' ';
+    out30 += key + ' ---' + a[key] + '<br>';
 }
+document.querySelector('.out30').innerHTML = out30;
+
+
+
+// function printTime() {
+//     let d = new Date();
+//     let hours = d.getHours();
+//     let mins = d.getMinutes();
+//     let secs = d.getSeconds();
+//     // document.body.innerHTML = hours + ":" + mins + ":" + secs;
+//     document.querySelector('.time').innerHTML = hours + ":" + mins + ":" + secs;
+// }
+// setInterval(printTime, 1000);
+
+// // задача перемещения единицы в ряду без цикла
+// let d = [1, 0, 0, 0, 0];
+// document.querySelector('.out2').innerHTML = d;
+// let k = 0;
+// document.querySelector('button').onclick = () => {
+//     if (k + 1 < 5) {
+//         d[k] = 0;
+//         d[k + 1] = 1;
+//         k++;
+//     }
+
+//     document.querySelector('.out2').innerHTML = d;
+// }
 
 
 
