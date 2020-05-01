@@ -1,26 +1,49 @@
-const a = {
-    "a": 5,
-    "b": 'Hello',
-    "z2": 'Hi',
-    y43: 2020,
-    'villa de': 3040,
-};
-a.yyyy = 5555;
-a.b = 'uuu';
-delete a.a;// удаление элемента массива по его имени
-console.log(a);
-console.log(a.z2);
-let kk = 'y43';
-console.log(a[kk]);
+fetch('http://api.openweather.org/data/2.5/weather?q=London,uk&appid=70e1ed322b02acbc57d443dd91065f3e')
+    .then(function (resp) { return resp.json() })
+    .then(function (data) {
+        console.log(data);
+        document.querySelector('.package-name').textContent = data.name;
+        document.querySelector('.price').innerHTML = Math.round(data.main.temp - 273) +
+            '&deg;';
+        document.querySelector('.disclaimer').textContent = data.weather[0]['description'];
+
+        //https://openweathermap.org/img/wn/02d@2x.png
+        // document.querySelector('.features li').innerHTML = '<img src="https://openweathermap.org/img/wn/' +
+        //     data.weather[0]['icon'] + '@2x.png">';
+        document.querySelector('.features li').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+
+    })
+    .catch(function () {
+        //catch any errors
+    });
+
+
+
+
+
+// const a = {
+//     "a": 5,
+//     "b": 'Hello',
+//     "z2": 'Hi',
+//     y43: 2020,
+//     'villa de': 3040,
+// };
+// a.yyyy = 5555;
+// a.b = 'uuu';
+// delete a.a;// удаление элемента массива по его имени
+// console.log(a);
+// console.log(a.z2);
+// let kk = 'y43';
+// console.log(a[kk]);
 
 // document.querySelector('.out30').innerHTML = a;
-let out30 = '';
-for (let key in a) {
-    // out30 += key;
-    // out30 += a[key] + ' ';
-    out30 += key + ' ---' + a[key] + '<br>';
-}
-document.querySelector('.out30').innerHTML = out30;
+// let out30 = '';
+// for (let key in a) {
+//     // out30 += key;
+//     // out30 += a[key] + ' ';
+//     out30 += key + ' ---' + a[key] + '<br>';
+// }
+// document.querySelector('.out30').innerHTML = out30;
 
 
 
