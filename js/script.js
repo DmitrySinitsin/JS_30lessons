@@ -1,21 +1,54 @@
-fetch('http://api.openweather.org/data/2.5/weather?q=London,uk&appid=70e1ed322b02acbc57d443dd91065f3e')
-    .then(function (resp) { return resp.json() })
-    .then(function (data) {
-        console.log(data);
-        document.querySelector('.package-name').textContent = data.name;
-        document.querySelector('.price').innerHTML = Math.round(data.main.temp - 273) +
-            '&deg;';
-        document.querySelector('.disclaimer').textContent = data.weather[0]['description'];
+let a = new Set();
+a.add(1);
+a.add(2);
+a.add('Hello');
+a.add(1);//analog HASHSET IN JAVA ВТОРОЙ РАЗ НЕ ДОБАВИШЬ ТАКОЕ ЖЕ
+a.add('1');//но разные типы добавятся
+//a.clear();//очищает сет
+// a.delete('Hello');//удаляет элемент сета равный аргументу
 
-        //https://openweathermap.org/img/wn/02d@2x.png
-        // document.querySelector('.features li').innerHTML = '<img src="https://openweathermap.org/img/wn/' +
-        //     data.weather[0]['icon'] + '@2x.png">';
-        document.querySelector('.features li').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+console.log(a);
+console.log(a[0]);//NO !!!! zero absent
+console.log(a.length);// NO
+console.log(a.size);//YES количество элементов
+console.log(a.has(2));//логическое возвращение тру или фолз наличия аргумента в сете
+console.log(a.has('2'));//элемента такого нет значит вернет Ложь
+//for (let i = 0; i < a.size) a[i]; //NO
+//for (let i in a) // NO
+for (let item of a) {
+    console.log(item);
+}
+//способ удаления дубликатов из массива ниже:
+let arr = [1, 2, 3, 4, 5, 6, 7, 2, 5, 8, 9, 1, 10, 'десяточка'];
+let b = new Set(arr);
+console.log(b);
+console.log(b.size);//размер набора
 
-    })
-    .catch(function () {
-        //catch any errors
-    });
+//способ преобразовать Набор в Массив ниже:
+let bArr = Array.from(b);
+console.log(bArr);
+console.log(bArr[2]);
+
+//less13 API
+
+// fetch('http://api.openweather.org/data/2.5/weather?q=London,uk&appid=70e1ed322b02acbc57d443dd91065f3e')
+//     .then(function (resp) { return resp.json() })
+//     .then(function (data) {
+//         console.log(data);
+//         document.querySelector('.package-name').textContent = data.name;
+//         document.querySelector('.price').innerHTML = Math.round(data.main.temp - 273) +
+//             '&deg;';
+//         document.querySelector('.disclaimer').textContent = data.weather[0]['description'];
+
+//         //https://openweathermap.org/img/wn/02d@2x.png
+//         // document.querySelector('.features li').innerHTML = '<img src="https://openweathermap.org/img/wn/' +
+//         //     data.weather[0]['icon'] + '@2x.png">';
+//         document.querySelector('.features li').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
+
+//     })
+//     .catch(function () {
+//         //catch any errors
+//     });
 
 
 
