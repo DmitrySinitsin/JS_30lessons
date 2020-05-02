@@ -1,33 +1,97 @@
-let a = new Set();
-a.add(1);
-a.add(2);
-a.add('Hello');
-a.add(1);//analog HASHSET IN JAVA ВТОРОЙ РАЗ НЕ ДОБАВИШЬ ТАКОЕ ЖЕ
-a.add('1');//но разные типы добавятся
-//a.clear();//очищает сет
-// a.delete('Hello');//удаляет элемент сета равный аргументу
+let arr = [4, 5, 6];
+let allP = document.getElementsByTagName('p');
+let qP = document.querySelectorAll('p');
+console.log(arr);
+console.log(allP);
+console.log(allP.length);
+//console.log(allP[0]);
+console.log(qP.length);
 
-console.log(a);
-console.log(a[0]);//NO !!!! zero absent
-console.log(a.length);// NO
-console.log(a.size);//YES количество элементов
-console.log(a.has(2));//логическое возвращение тру или фолз наличия аргумента в сете
-console.log(a.has('2'));//элемента такого нет значит вернет Ложь
-//for (let i = 0; i < a.size) a[i]; //NO
-//for (let i in a) // NO
-for (let item of a) {
-    console.log(item);
+for (let i = 0; i < qP.length; i++) {
+    console.log(qP[i]);
 }
-//способ удаления дубликатов из массива ниже:
-let arr = [1, 2, 3, 4, 5, 6, 7, 2, 5, 8, 9, 1, 10, 'десяточка'];
-let b = new Set(arr);
-console.log(b);
-console.log(b.size);//размер набора
 
-//способ преобразовать Набор в Массив ниже:
-let bArr = Array.from(b);
-console.log(bArr);
-console.log(bArr[2]);
+// for (let key in qP) {
+//     console.log(qP[key]);
+// }
+
+
+
+// for (let item of qP) {
+//     console.log(item);
+// }
+
+
+// for (let i = 0; i < allP.length; i++) {
+//     console.log(allP[i]);
+// }
+
+// for (let key in allP) {
+//     console.log(allP[key]);
+// }
+
+// for (let item of allP) {
+//     console.log(item);
+// }
+
+
+
+//1======================================
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// 2======================================
+// for (let key in arr) {
+//     console.log(key);
+// }
+
+// //2/1======================================
+// for (let key in arr) {
+//     console.log(arr[key]);
+// }
+
+// //3==for of перебирает НЕ ИНДЕКСЫ А ЗНАЧЕНИЯ!!!====================================
+// for (let item of arr) {
+//     console.log(item);
+// }
+
+
+
+
+
+
+//less14 Set
+// let a = new Set();
+// a.add(1);
+// a.add(2);
+// a.add('Hello');
+// a.add(1);//analog HASHSET IN JAVA ВТОРОЙ РАЗ НЕ ДОБАВИШЬ ТАКОЕ ЖЕ
+// a.add('1');//но разные типы добавятся
+// //a.clear();//очищает сет
+// // a.delete('Hello');//удаляет элемент сета равный аргументу
+
+// console.log(a);
+// console.log(a[0]);//NO !!!! zero absent
+// console.log(a.length);// NO
+// console.log(a.size);//YES количество элементов
+// console.log(a.has(2));//логическое возвращение тру или фолз наличия аргумента в сете
+// console.log(a.has('2'));//элемента такого нет значит вернет Ложь
+// //for (let i = 0; i < a.size) a[i]; //NO
+// //for (let i in a) // NO
+// for (let item of a) {
+//     console.log(item);
+// }
+// //способ удаления дубликатов из массива ниже:
+// let arr = [1, 2, 3, 4, 5, 6, 7, 2, 5, 8, 9, 1, 10, 'десяточка'];
+// let b = new Set(arr);
+// console.log(b);
+// console.log(b.size);//размер набора
+
+// //способ преобразовать Набор в Массив ниже:
+// let bArr = Array.from(b);
+// console.log(bArr);
+// console.log(bArr[2]);
 
 //less13 API
 
