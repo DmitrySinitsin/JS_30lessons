@@ -1,15 +1,48 @@
-let arr = [4, 5, 6];
-let allP = document.getElementsByTagName('p');
-let qP = document.querySelectorAll('p');
-console.log(arr);
-console.log(allP);
-console.log(allP.length);
-//console.log(allP[0]);
-console.log(qP.length);
+let a = [4, 5, 12, 200, 1, 0, -2];
+// FILTER
+let c = a.filter(function (item, index) {
+    if (item % 2 == 0) { return true }
+    else { return false };
+})
 
-for (let i = 0; i < qP.length; i++) {
-    console.log(qP[i]);
-}
+console.log(c);
+
+
+// MAP
+// let b = a.map(function (item, index) {
+//     // console.log(item);
+//     console.log(index);
+//     return item * 5;
+//     // return index;
+// })
+
+// let b = a.map((item, index) => {
+//     console.log(item);
+//     // console.log(index);
+//     return item * 5;
+//     // return index;
+// })
+
+// let b = a.map((item, index) => item * 5)
+
+// let b = a.map(item => item * 5)
+
+// console.log(b);
+
+
+// LESSON 16 FOR FORIN FOROF
+// let arr = [4, 5, 6];
+// let allP = document.getElementsByTagName('p');
+// let qP = document.querySelectorAll('p');
+// console.log(arr);
+// console.log(allP);
+// console.log(allP.length);
+// //console.log(allP[0]);
+// console.log(qP.length);
+
+// for (let i = 0; i < qP.length; i++) {
+//     console.log(qP[i]);
+// }
 
 // for (let key in qP) {
 //     console.log(qP[key]);
