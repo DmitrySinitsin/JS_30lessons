@@ -1,11 +1,28 @@
-let a = [4, 5, 12, 200, 1, 0, -2];
-// FILTER
-let c = a.filter(function (item, index) {
-    if (item % 2 == 0) { return true }
-    else { return false };
-})
+let a = 'hello, hi, mahai';
+console.log(a.split(','));
 
-console.log(c);
+let b = [8, 9, 7];
+console.log(b);
+console.log(b.join());
+console.log(b.join(':'));
+
+
+b.forEach(function (elem, index) {
+    console.log(index);
+    console.log(elem * 2);
+    console.log('---');
+});
+console.log(b);
+
+
+// let a = [4, 5, 12, 200, 1, 0, -2];
+// // FILTER
+// let c = a.filter(function (item, index) {
+//     if (item % 2 == 0) { return true }
+//     else { return false };
+// })
+
+// console.log(c);
 
 
 // MAP
