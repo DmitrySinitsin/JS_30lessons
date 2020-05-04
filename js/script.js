@@ -1,58 +1,118 @@
-document.querySelector('.one').onclick = function (event) {
-    console.log(event);
-    console.log('click');
-}
-
-document.querySelector('.two').onclick = function () {
-    console.log('click2');
-}
-
-document.querySelector('.two').ondblclick = () => {
-    console.log('double click detected!')
-}
-
-document.querySelector('.two').oncontextmenu = () => {
-    console.log('right button');
-    return false;
-}
-
-// let w = 75;
-// document.querySelector('.three').onmousemove = () => {
-//     document.querySelector('.three').style.width = w + 'px';
-//     w++;
+// 20LESSON KEYBOARD EVENTS
+// document.querySelector('.i-1').oninput = function (event) {
+//     console.log(1);
+//     console.log(event);
 // }
 
-document.querySelector('.three').onmouseenter = () => {
-    document.querySelector('.three').style.background = 'yellow';
-    console.log(1);
+document.querySelector('.i-1').onkeypress = function (event) {
+    console.log('keyPRESS');
+    console.log('charCode: ' + event.charCode);
+    console.log('code: ' + event.code);
+    console.log('key: ' + event.key);
+    console.log('keyCode: ' + event.keyCode);
+
+    console.log(event);
+}
+document.querySelector('.i-1').onkeydown = function (event) {
+    console.log('keydown');
+    console.log('charCode: ' + event.charCode);
+    console.log('code: ' + event.code);
+    console.log('key: ' + event.key);
+    console.log('keyCode: ' + event.keyCode);
+
+    // console.log(event);
+
+    if (event.key == 'CapsLock') {
+        document.querySelector('.ch-1').checked = true;
+    } else {
+        document.querySelector('.ch-1').checked = false;
+    }
 }
 
-document.querySelector('.three').onmouseleave = () => {
-    document.querySelector('.three').style.background = 'green';
-    console.log(2);
+document.querySelector('.i-1').onkeyup = function (event) {
+    console.log('keyup');
+    console.log('charCode: ' + event.charCode);
+    console.log('code: ' + event.code);
+    console.log('key: ' + event.key);
+    console.log('keyCode: ' + event.keyCode);
 }
 
-document.querySelector('.three').onmousedown = () => {
-    document.querySelector('.three').style.background = 'orange';
-    console.log(3);
+document.querySelector('.i-2').onkeypress = function (event) {
+    console.log('keyPRESS');
+    console.log('charCode: ' + event.charCode);
+    console.log('code: ' + event.code);
+    console.log('key: ' + event.key);
+    console.log('keyCode: ' + event.keyCode);
+    const a = {
+        q: 'w',
+        w: 'e'
+    }
+    document.querySelector('.i-2').value += a[event.key];
+    return false;
+    //console.log(event);
 }
 
-document.querySelector('.three').onmouseup = () => {
-    document.querySelector('.three').style.background = 'blue';
-    console.log(3);
-}
-
-let p = 10;
-document.querySelector('button').onclick = function (e) {
-    p++;
-    document.querySelector('progress').value = p;
-}
 
 
 
 
 
-// 018LESSON
+// 019 LESSON MOUSE EVENTS
+// document.querySelector('.one').onclick = function (event) {
+//     console.log(event);
+//     console.log('click');
+// }
+
+// document.querySelector('.two').onclick = function () {
+//     console.log('click2');
+// }
+
+// document.querySelector('.two').ondblclick = () => {
+//     console.log('double click detected!')
+// }
+
+// document.querySelector('.two').oncontextmenu = () => {
+//     console.log('right button');
+//     return false;
+// }
+
+// // let w = 75;
+// // document.querySelector('.three').onmousemove = () => {
+// //     document.querySelector('.three').style.width = w + 'px';
+// //     w++;
+// // }
+
+// document.querySelector('.three').onmouseenter = () => {
+//     document.querySelector('.three').style.background = 'yellow';
+//     console.log(1);
+// }
+
+// document.querySelector('.three').onmouseleave = () => {
+//     document.querySelector('.three').style.background = 'green';
+//     console.log(2);
+// }
+
+// document.querySelector('.three').onmousedown = () => {
+//     document.querySelector('.three').style.background = 'orange';
+//     console.log(3);
+// }
+
+// document.querySelector('.three').onmouseup = () => {
+//     document.querySelector('.three').style.background = 'blue';
+//     console.log(3);
+// }
+
+// let p = 10;
+// document.querySelector('button').onclick = function (e) {
+//     p++;
+//     document.querySelector('progress').value = p;
+// }
+
+
+
+
+
+// 018LESSON split join filter
 // let a = 'hello, hi, mahai';
 // console.log(a.split(','));
 
