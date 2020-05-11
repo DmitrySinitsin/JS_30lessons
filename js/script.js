@@ -1,28 +1,98 @@
+// 23LESSON localStorage
+window.addEventListener('storage', function (e) {//отслеживание изменений на других страницах ДАННОГО хоста (добавление в корзину и тд)
+    console.log('change');
+    document.querySelector('.out').textContent = localStorage.getItem('b1');
+});
+
+localStorage.setItem('data', 5);
+console.log(localStorage.getItem('data'));
+
+const a = [3, 4, 5];
+localStorage.setItem('a', JSON.stringify(a));
+let b = localStorage.getItem('a');
+b = JSON.parse(b);
+console.log(b);
+console.log(b[1]);
+console.log(typeof b);
+
+const c = {
+    hello: 5,
+    k: 2,
+    4: 'hi'
+};
+localStorage.setItem('c', JSON.stringify(c));
+let d = localStorage.getItem('c');
+d = JSON.parse(d);
+console.log(d);
+// console.log(b[1]);
+console.log(typeof d);
+
+
+
+
+
+
+
+// 22LESSON Apple EVENTS
+// let a1 = 0;
+// document.querySelector('.block-1').onclick = function () {
+//     a1++;
+//     document.querySelector('.out-1').innerHTML = 'click ' + a1;
+// }
+
+// let a2 = 0;
+// document.querySelector('.block-2').ondblclick = function () {
+//     a2++;
+//     document.querySelector('.out-2').innerHTML = 'dblclick ' + a2;
+// }
+
+// let a3 = 0;
+// document.querySelector('.block-3').onmousemove = function () {
+//     a3++;
+//     document.querySelector('.out-3').innerHTML = 'move ' + a3;
+// }
+
+// let a4 = 0;
+// document.querySelector('.block-4').onmouseenter = function () {
+//     a4++;
+//     document.querySelector('.out-4').innerHTML = 'enter ' + a4;
+// }
+
+// let a5 = 0;
+// document.querySelector('.block-5').onmouseleave = function () {
+//     a5++;
+//     document.querySelector('.out-5').innerHTML = 'leave ' + a5;
+// }
+
+
+
+
+
 // 21LESSON touch EVENTS
 
-document.querySelector('.block-1').addEventListener("touchstart", myTouch);
-document.querySelector('.block-1').addEventListener("touchend", myTouchEnd);
-document.querySelector('.block-2').addEventListener("touchmove", myTouchMove);
+// document.querySelector('.block-1').addEventListener("touchstart", myTouch);
+// document.querySelector('.block-1').addEventListener("touchend", myTouchEnd);
+// document.querySelector('.block-2').addEventListener("touchmove", myTouchMove);
 
-function myTouch(event) {
-    console.log('touch');
-    console.log(event);
-    document.querySelector('.out-1').innerHTML = event.touches.length;
+// function myTouch(event) {
+//     console.log('touch');
+//     console.log(event);
+//     document.querySelector('.out-1').innerHTML = event.touches.length;
 
-    document.querySelector('.out-2').innerHTML += 'work ';
-}
-function myTouchEnd(event) {
+//     document.querySelector('.out-2').innerHTML += 'work ';
+// }
+// function myTouchEnd(event) {
 
-    document.querySelector('.out-2').innerHTML += 'end ';
-}
+//     document.querySelector('.out-2').innerHTML += 'end ';
+// }
 
-function myTouchMove(event) {
-    event.preventDefault();
-    console.log(event);
-    //document.querySelector('.out-1').innerHTML = event.touches.length;
-    document.querySelector('.out-2').innerHTML += 'move ';
-    return false;//отключение дефолтного поведения браузера вместе с превентДефолт
-}
+// function myTouchMove(event) {
+//     event.preventDefault();
+//     console.log(event);
+//     //document.querySelector('.out-1').innerHTML = event.touches.length;
+//     document.querySelector('.out-2').innerHTML += 'move ';
+//     return false;//отключение дефолтного поведения браузера вместе с превентДефолт
+// }
 
 
 

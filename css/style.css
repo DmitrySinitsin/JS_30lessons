@@ -25,7 +25,7 @@ div{
 .three{
     border:2px solid red;
 }
-.out-1, .out-2{
+.out-1, .out-2,.out-3, .out-4,.out-5{
     border:5px solid greenyellow;
 }
 .bg-2{
@@ -41,7 +41,7 @@ div{
 hr{
     clear:both;
 }
-.block-1, .block-2{
+.block-1, .block-2, .block-3, .block-4, .block-5{
     width: 250px;
     height: 250px;
     border: 3px solid red;
