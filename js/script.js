@@ -1,56 +1,85 @@
+// 21LESSON touch EVENTS
+
+document.querySelector('.block-1').addEventListener("touchstart", myTouch);
+document.querySelector('.block-1').addEventListener("touchend", myTouchEnd);
+document.querySelector('.block-2').addEventListener("touchmove", myTouchMove);
+
+function myTouch(event) {
+    console.log('touch');
+    console.log(event);
+    document.querySelector('.out-1').innerHTML = event.touches.length;
+
+    document.querySelector('.out-2').innerHTML += 'work ';
+}
+function myTouchEnd(event) {
+
+    document.querySelector('.out-2').innerHTML += 'end ';
+}
+
+function myTouchMove(event) {
+    event.preventDefault();
+    console.log(event);
+    //document.querySelector('.out-1').innerHTML = event.touches.length;
+    document.querySelector('.out-2').innerHTML += 'move ';
+    return false;//отключение дефолтного поведения браузера вместе с превентДефолт
+}
+
+
+
+
 // 20LESSON KEYBOARD EVENTS
 // document.querySelector('.i-1').oninput = function (event) {
 //     console.log(1);
 //     console.log(event);
 // }
 
-document.querySelector('.i-1').onkeypress = function (event) {
-    console.log('keyPRESS');
-    console.log('charCode: ' + event.charCode);
-    console.log('code: ' + event.code);
-    console.log('key: ' + event.key);
-    console.log('keyCode: ' + event.keyCode);
+// document.querySelector('.i-1').onkeypress = function (event) {
+//     console.log('keyPRESS');
+//     console.log('charCode: ' + event.charCode);
+//     console.log('code: ' + event.code);
+//     console.log('key: ' + event.key);
+//     console.log('keyCode: ' + event.keyCode);
 
-    console.log(event);
-}
-document.querySelector('.i-1').onkeydown = function (event) {
-    console.log('keydown');
-    console.log('charCode: ' + event.charCode);
-    console.log('code: ' + event.code);
-    console.log('key: ' + event.key);
-    console.log('keyCode: ' + event.keyCode);
+//     console.log(event);
+// }
+// document.querySelector('.i-1').onkeydown = function (event) {
+//     console.log('keydown');
+//     console.log('charCode: ' + event.charCode);
+//     console.log('code: ' + event.code);
+//     console.log('key: ' + event.key);
+//     console.log('keyCode: ' + event.keyCode);
 
-    // console.log(event);
+//     // console.log(event);
 
-    if (event.key == 'CapsLock') {
-        document.querySelector('.ch-1').checked = true;
-    } else {
-        document.querySelector('.ch-1').checked = false;
-    }
-}
+//     if (event.key == 'CapsLock') {
+//         document.querySelector('.ch-1').checked = true;
+//     } else {
+//         document.querySelector('.ch-1').checked = false;
+//     }
+// }
 
-document.querySelector('.i-1').onkeyup = function (event) {
-    console.log('keyup');
-    console.log('charCode: ' + event.charCode);
-    console.log('code: ' + event.code);
-    console.log('key: ' + event.key);
-    console.log('keyCode: ' + event.keyCode);
-}
+// document.querySelector('.i-1').onkeyup = function (event) {
+//     console.log('keyup');
+//     console.log('charCode: ' + event.charCode);
+//     console.log('code: ' + event.code);
+//     console.log('key: ' + event.key);
+//     console.log('keyCode: ' + event.keyCode);
+// }
 
-document.querySelector('.i-2').onkeypress = function (event) {
-    console.log('keyPRESS');
-    console.log('charCode: ' + event.charCode);
-    console.log('code: ' + event.code);
-    console.log('key: ' + event.key);
-    console.log('keyCode: ' + event.keyCode);
-    const a = {
-        q: 'w',
-        w: 'e'
-    }
-    document.querySelector('.i-2').value += a[event.key];
-    return false;
-    //console.log(event);
-}
+// document.querySelector('.i-2').onkeypress = function (event) {
+//     console.log('keyPRESS');
+//     console.log('charCode: ' + event.charCode);
+//     console.log('code: ' + event.code);
+//     console.log('key: ' + event.key);
+//     console.log('keyCode: ' + event.keyCode);
+//     const a = {
+//         q: 'w',
+//         w: 'e'
+//     }
+//     document.querySelector('.i-2').value += a[event.key];
+//     return false;
+//     //console.log(event);
+// }
 
 
 
